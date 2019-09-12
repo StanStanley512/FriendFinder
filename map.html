@@ -16,12 +16,12 @@
     <nav>
       <div class="nav-wrapper">
 
-        <a href="index.html" class="brand-logo">CapCityCaraoke</a>
+        <a href="index.html" class="brand-logo">CapCityKaraoke</a>
         <a href="index.html" data-target="sidenav-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="index.html">Home</a></li>
-          <li><a href="song.html">Find Song</a></li>
-          <li><a href="map.html">Find Place</a></li>
+          <li><a href="song.html">Find Songs</a></li>
+          <li><a href="map.html">Find Places</a></li>
           <li><a href="yourpage.html">Find Yourself</a></li>
         </ul>
       </div>
@@ -30,23 +30,36 @@
 
   <ul class="sidenav" id="sidenav-menu">
     <li><a href="index.html">Home</a></li>
-    <li><a href="songpage.html">Find Song</a></li>
-    <li><a href="placepage.html">Find Place</a></li>
+    <li><a href="songpage.html">Find Songs</a></li>
+    <li><a href="placepage.html">Find Places</a></li>
     <li><a href="yourpage.html">Find Yourself</a></li>
   </ul>
 
-  <div class="container"></div>
+  <div class="container">
+    <h2>Karaoke Near You</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Website</th>
+          <th scope="col">Latitude/Longitude</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
 
   <!--JavaScript at end of body for optimized loading-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('.carousel').carousel();
-      $('.sidenav').sidenav();
-    });
-  </script>
+
+  <!-- Add link to the javascript -->
+  <script type="text/javascript" src="javascript/app_map.js"></script>
+
 </body>
 
 </html>
