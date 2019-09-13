@@ -2,21 +2,21 @@
 
 # CapCityKaraoke
 
-##Welcome to CapCityKaraoke!
+### Welcome to CapCityKaraoke!
 
 For Karaoke novices and enthusiastics alike, use this app to:
 * Find hotspots for Karaoke in the Austin area
 * See what karaoke spots are "hot" based on all user activity and prefence
 * Use user spotify metrics to get a random song to sing based on your recent music tastes
 
-####Languages used
+#### Languages used
 * HMTL
 * Materialize
 * Javascript
 * Google Maps API
 * Spotify API
 
-####Parameters
+#### Parameters
 * At least 2 APIs
 * 1 new programming language/library/tech
 * Use ajax to pull data
