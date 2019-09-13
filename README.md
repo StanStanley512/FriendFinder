@@ -4,7 +4,7 @@
 
 ### Welcome to CapCityKaraoke!
 
-For Karaoke novices and enthusiastics alike, use this app to:
+For Karaoke novices and enthusiastics alike, use this website to:
 * Find hotspots for Karaoke in the Austin area
 * See what karaoke spots are "hot" based on all user activity and prefence
 * Use user spotify metrics to get a random song to sing based on your recent music tastes
