@@ -2,9 +2,9 @@ $(document).ready(function () {
     $('.carousel').carousel();
     $('.sidenav').sidenav();
 
-    function findUserSongs() {
+    function loadTweets() {
 
     };
 
-    findUserSongs();
+    loadTweets();
 });
