@@ -91,6 +91,7 @@
             <div class="col s2 center-align" id="rock-button"><a class="btn-small">Rock</a></div>
             <div class="col s2 center-align" id="rap-button"><a class="btn-small">Rap</a></div>
         </div>
+
         <!-- song collection -->
         <div class="row section">
             <div class="col s12 section">
@@ -106,8 +107,9 @@
           <p class="text-flow">Do you want to add this song to Up Next queue?</p>
         </div>
         <div class="modal-footer">
-          <a onclick="M.toast({html: 'Song Added to Up Next queue'})" href="#!" class="modal-close waves-effect waves-green btn-flat">Yes</a>
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+          <a onclick="M.toast({html: 'Song Added to Up Next queue'})" href="#!" id="yes-add-song" class="modal-close waves-effect waves-green btn-flat">Yes</a>
+          <a onclick="M.toast({html: 'Song Removed'})" href="#!" id="remove-add-song" class="modal-close waves-effect waves-green btn-flat">Remove</a>
+          <a href="#!" id="no-add-song" class="modal-close waves-effect waves-green btn-flat">No</a>
 
         </div>
       </div>

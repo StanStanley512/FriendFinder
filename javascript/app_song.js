@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    localStorage.clear()
 
     $('.carousel').carousel();
     $('.sidenav').sidenav();
@@ -8,21 +8,32 @@ $(document).ready(function () {
 
     // open modal
     $('#song-collection').on('click', '.avatar', function(){
-        let obj =this;
-        let song = obj.data.song;
-        let song = obj.data.artist;
-       console.log(song);
-       console.log(artist);
+        let Ava = this
+        
         //add to UpNext on close
         $('#add-to-queue-modal').modal({
             dismissible: false,
-            onCloseEnd: function(){ 
-            console.log(obj.data)   
-        }
+        }); 
 
-    }); 
-
+        // modal btn listeners
         $('#add-to-queue-modal').modal('open');
+        $('#no-add-song').on('click', function(){
+            $('#add-to-queue-modal').modal('close')
+        });
+        $('#remove-add-song').on('click', function(){
+            console.log('yes');
+            console.log(Ava['data-song'])
+            
+            //remove Avtar
+
+
+        });
+        $('#yes-add-song').on('click', function(){
+            console.log('yes');
+            //remove Avtar
+
+
+        });
         
     })
     
