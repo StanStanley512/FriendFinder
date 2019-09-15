@@ -19,11 +19,17 @@
             max-height: 200px;
             overflow: scroll;
         }
+        .brand-logo{
+            margin-left: 25px;
+        }
+        .hide-on-med-and-down{
+            margin-right:25px;
+        }
     </style>
 </head>
 
 <body>
-
+    <!-- desktop navbar -->
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
@@ -39,7 +45,7 @@
             </div>
         </nav>
     </div>
-
+    <!-- mobile navbar -->
     <ul class="sidenav" id="sidednav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="songpage.html">Find Songs</a></li>
@@ -49,28 +55,28 @@
     </ul>
 
     <div class="container">
+        <h4>User History</h4>
         <div class="row">
             <div class="col s12">
                 <table>
                     <tbody id="user-activity">
                         <tr>
-                            <th scope="row" id="performances">Performances: </th>
-                            <td>5</td>
+                            <th scope="row" id="performances">Performances:</th>
+                            <td id="performance-count"></td>
                         </tr>
                         <tr>
-                            <th scope="row" id="venues">Venues</th>
-                            <td>2</td>
+                            <th scope="row" id="venues">Venues:</th>
+                            <td id="venue-count"></td>
                         </tr>
                         <tr>
-                            <th scope="row" id="recent-songs">Most Recent Songs</th>
-                            <td>--</td>
+                            <th scope="row" id="recent-songs">Most Recent Song:</th>
+                            <td id="most-recent-song"></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
-        
         <!--Song Collection -->
         <div class="row">
             <div class="col s12">
@@ -160,7 +166,6 @@
         </div>
     </div>
     
-
     <!--JavaScript at end of body for optimized loading-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -168,6 +173,5 @@
     <!-- Our JavaScript -->
     <script type="text/javascript" src="javascript/app_history.js"></script>
 </body>
-
 
 </html>
