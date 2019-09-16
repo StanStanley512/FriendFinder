@@ -103,12 +103,12 @@
   <div id="add-to-queue-modal" class="modal">
         <div class="modal-content">
           <h6>Add Song to Up Next queue</h6>
-          <p class="text-flow">Do you want to add this song to Up Next queue?</p>
+          <p class="text-flow">Song added to Up Next</p>
         </div>
         <div class="modal-footer">
-          <a onclick="M.toast({html: 'Song Added to Up Next queue'})" href="#!" class="modal-close waves-effect waves-green btn-flat">Yes</a>
-          <a onclick="M.toast({html: 'Song Removed'})" href="#!" class="modal-close waves-effect waves-green btn-flat">Remove</a>
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">No</a>
+          <a onclick="M.toast({html: 'Song Added to Up Next queue'})" href="#!" id="okay-add-song" class="modal-close waves-effect waves-green btn-flat">Okay</a>
+          <a onclick="M.toast({html: 'Song Removed'})" href="#!" id="remove-add-song" class="modal-close waves-effect waves-green btn-flat">Remove</a>
+          <a href="#!" id="cancel-add-song" class="modal-close waves-effect waves-green btn-flat">Canceled</a>
 
 
         </div>

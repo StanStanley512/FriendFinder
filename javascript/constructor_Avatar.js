@@ -1,21 +1,16 @@
 let constructCount = 0;
-Avatar = function(song, artist, cover){
+function Avatar(song, artist, cover){
     this.song =song;
     this.artist = artist;
     this.cover = cover;
-
-    songData = this.song;
-    artistData = this.artist;
-    coverData = this.cover;
-
 }
 Avatar.prototype.createAva = function(){
     let avaItem = $('<li>');
     avaItem.attr({
         'class' : 'collection-item avatar',
-        'data-song' : songData,
-        'data-artist' : artistData,
-        'data-cover' : coverData,
+        'data-song' : this.song,
+        'data-artist' : this.artist,
+        'data-cover' : this.cover,
         'id' : 'ava-'+constructCount
     });
 
@@ -34,6 +29,6 @@ Avatar.prototype.createAva = function(){
         
     $('#song-collection').prepend(avaItem);
     // local storage
-    localStorage.setItem(`Ava-${constructCount}`, avaItem)
+    // localStorage.setItem(`Ava-${constructCount}`, avaItem)
     constructCount++;
 }
