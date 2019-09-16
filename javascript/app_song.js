@@ -7,33 +7,43 @@ $(document).ready(function () {
 
     // open modal
     $('#song-collection').on('click', '.avatar', function(){
-        let Ava = this
+        let Ava= $(this).attr('id')
+        let song = $(this).attr('data-song');
+        let artist = $(this).attr('data-artist');
+        let cover = $(this).attr('data-cover');
+
+
+            console.log('yes');
+            console.log(Ava)
+            console.log(song);
+            console.log(artist);
+            console.log(cover);
+
+    
         
         //add to UpNext on close
-        $('#add-to-queue-modal').modal({
+        $('.add-to-queue-modal').modal({
             dismissible: false,
         }); 
+        $('#add-to-queue-modal').modal('open');
+        $(this).detach() //removes from song-collection need to hold in an array
+   
+    });
 
         // modal btn listeners
-        $('#add-to-queue-modal').modal('open');
-        //on click no
-        $('#no-add-song').on('click', function(){
-            $('#add-to-queue-modal').modal('close')
-        });
         //on click remove
-        $('#remove-add-song').on('click', function(){
-            console.log('yes');
-            console.log(Ava['data-song'])
-            //remove Avatar
+        $('#cancel-add-song').on('click', function(){
+            console.log($(this))
+            
         });
 
         //on click adds song to queue page
-        $('#yes-add-song').on('click', function(){
-            console.log('yes');
-            //remove Avatar
-            $("queue-collection").prepend("<div class='row'>"+spotifySong+"</div>");
+        $('#okay-add-song').on('click', function(){
+          
+            //send Avatar to upnext with firebase
+           
         }); 
-    })
+    
     
     //LIST SONGS PSUEDOCODE
     // function callSongs() {

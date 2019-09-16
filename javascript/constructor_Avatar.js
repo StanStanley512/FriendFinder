@@ -29,6 +29,6 @@ Avatar.prototype.createAva = function(){
         
     $('#song-collection').prepend(avaItem);
     // local storage
-    localStorage.setItem(`Ava-${constructCount}`, avaItem)
+    // localStorage.setItem(`Ava-${constructCount}`, avaItem)
     constructCount++;
 }
