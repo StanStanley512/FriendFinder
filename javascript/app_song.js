@@ -4,7 +4,6 @@ $(document).ready(function () {
     $('.carousel').carousel();
     $('.sidenav').sidenav();
     $('#add-to-queue-modal').modal();
-   
 
     // open modal
     $('#song-collection').on('click', '.avatar', function(){
@@ -23,23 +22,20 @@ $(document).ready(function () {
         $('#remove-add-song').on('click', function(){
             console.log('yes');
             console.log(Ava['data-song'])
-            
             //remove Avtar
 
 
         });
+
+        //adds song to queue page
         $('#yes-add-song').on('click', function(){
             console.log('yes');
             //remove Avtar
-
-
-        });
-        
+            $("queue-collection").prepend("<div class='row'>"+spotifySong+"</div>");
+        }); 
     })
     
-    
-    
-
+    //SPOTIFY API FUNCTION
     // function callSongs() {
     //     let queryURL = ' '
 
