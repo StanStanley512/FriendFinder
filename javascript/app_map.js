@@ -55,3 +55,8 @@ $(document).ready(function () {
 
       //getPositionForAddress("2405 Robert Dedman Drive Austin TX 78712");
   });
+
+
+//SEARCH FUNCTIONS
+// on click
+//get locations of #karaoke withn X radius

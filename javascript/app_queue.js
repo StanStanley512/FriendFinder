@@ -26,8 +26,11 @@ $(document).ready(function () {
         $("history-collection").prepend("<div class='row'>"+spotifySong+"</div>");
     }); 
 
+    // LOADS USER QUEUE
     // function loadQueue() {
 
+    // review how to add something to "favorites"
+    // get and display songs from firebase
     // };
 
     // loadQueue();

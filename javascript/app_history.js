@@ -7,3 +7,5 @@ $(document).ready(function() {
 
     loadHistory();
 });
+
+// LIST PLAYED SONGS FROM QUEUE

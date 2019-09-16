@@ -8,3 +8,6 @@ $(document).ready(function () {
 
     loadTweets();
 });
+
+// DISPLAY TWEET 
+// with austin and karaoke
