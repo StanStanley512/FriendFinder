@@ -12,18 +12,19 @@ $(document).ready(function () {
         let artist = $(this).attr('data-artist');
         let cover = $(this).attr('data-cover');
 
-
-            console.log('yes');
+        console.log('yes');
             console.log(Ava)
             console.log(song);
             console.log(artist);
             console.log(cover);
-
-    
         
         //add to UpNext on close
         $('.add-to-queue-modal').modal({
             dismissible: false,
+            onCloseEnd: function(){
+            
+
+            }
         }); 
         $('#add-to-queue-modal').modal('open');
         $(this).detach() //removes from song-collection need to hold in an array
@@ -33,7 +34,7 @@ $(document).ready(function () {
         // modal btn listeners
         //on click remove
         $('#cancel-add-song').on('click', function(){
-            console.log($(this))
+            
             
         });
 
