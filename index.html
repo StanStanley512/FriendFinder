@@ -12,20 +12,29 @@
         .card-image.img {
             height: 100px;
         }
-        ul.collection{
+
+        ul.collection {
             max-height: 200px;
             overflow: scroll;
         }
-        .carousel{
+
+        .carousel {
             max-height: 350px;
             padding-bottom: 50px;
         }
-    
+
+        .brand-logo {
+            margin-left: 25px;
+        }
+
+        .hide-on-med-and-down {
+            margin-right: 25px;
+        }
     </style>
 </head>
 
 <body>
-
+    <!-- desktop navbar -->
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
@@ -41,7 +50,7 @@
             </div>
         </nav>
     </div>
-
+    <!-- mobile navbar -->
     <ul class="sidenav" id="sidednav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="songpage.html">Find Songs</a></li>
@@ -51,153 +60,102 @@
     </ul>
 
     <div class="container">
-
-        <h3>Top Songs</h3>
+        <h3>Welcome to CapCityKaraoke!</h3>
+        <h4>Austin Karaoke Tweets</h4>
         <div class="row">
             <div class="col s12"></div>
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <div class="card sticky-action">
-                            <div class="card-image ">
-                                <img src="http://lorempixel.com/200/200/technics/1">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons md1">headset</i></a>
-                            </div>
-                            <div class="card-content">
-                                <p id="card-title">Title</p>
-                                <p id="card-artist">Artist</p>
-                            </div>
-                        </div>
-                    </div>
-
+            <div class="carousel tweets">
                 <div class="carousel-item">
                     <div class="card sticky-action">
                         <div class="card-image ">
-                            <img src="http://lorempixel.com/200/200/technics/2">
+                            <img src="http://lorempixel.com/200/200/technics/1">
                             <a class="btn-floating halfway-fab waves-effect waves-light red">
-                            <i class="material-icons md1">headset</i></a>
+                                <i class="material-icons md1">headset</i></a>
                         </div>
                         <div class="card-content">
                             <p id="card-title">Title</p>
                             <p id="card-artist">Artist</p>
                         </div>
                     </div>
-                    </div>
-                    
-                    <div class="carousel-item">
-                        <div class="card sticky-action">
-                            <div class="card-image ">
-                                <img src="http://lorempixel.com/200/200/technics/3">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons md1">headset</i></a>
-                            </div>
-                            <div class="card-content">
-                                <p id="card-title">Title</p>
-                                <p id="card-artist">Artist</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="card sticky-action">
-                            <div class="card-image ">
-                                <img src="http://lorempixel.com/200/200/technics/4">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons md1">headset</i></a>
-                            </div>
-                            <div class="card-content">
-                                <p id="card-title">Title</p>
-                                <p id="card-artist">Artist</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="card sticky-action">
-                            <div class="card-image ">
-                                <img src="http://lorempixel.com/200/200/technics/5">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons md1">headset</i></a>
-                            </div>
-                            <div class="card-content">
-                                <p id="card-title">Title</p>
-                                <p id="card-artist">Artist</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="card sticky-action">
-                            <div class="card-image ">
-                                <img src="http://lorempixel.com/200/200/technics/6">
-                                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                                <i class="material-icons md1">headset</i></a>
-                            </div>
-                            <div class="card-content">
-                                <p id="card-title">Title</p>
-                                <p id="card-artist">Artist</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
 
-        <h3>Your Songs</h3>
-            <div class="row section">
-                <div class="col s12 section">
-                    <div class="row">
-                        <div class="col s12">
-                            <ul class="collection">
-                                <li class="collection-item avatar">
-                                    <img src="http://lorempixel.com/80/80/abstract/1" class="circle">
-                                    <span class="title">Title</span>
-                                    <p>Artist</p>
-                                    <a href="#!" class="secondary-content"><i class="material-icons">keyboard_voice</i></a>
-                                </li>
-                                <li class="collection-item avatar">
-                                    <img src="http://lorempixel.com/80/80/abstract/2" class="circle">
-                                    <span class="title">Title</span>
-                                    <p>Artist</p>
-                                    <a href="#!" class="secondary-content"><i class="material-icons">keyboard_voice</i></a>
-                                </li>
-                                <li class="collection-item avatar">
-                                    <img src="http://lorempixel.com/80/80/abstract/1" class="circle">
-                                    <span class="title">Title</span>
-                                    <p>Artist</p>
-                                    <a href="#!" class="secondary-content"><i class="material-icons">keyboard_voice</i></a>
-                                </li>
-                                <li class="collection-item avatar">
-                                    <img src="http://lorempixel.com/80/80/abstract/2" class="circle">
-                                    <span class="title">Title</span>
-                                    <p>Artist</p>
-                                    <a href="#!" class="secondary-content"><i class="material-icons">keyboard_voice</i></a>
-                                </li>
-                                <li class="collection-item avatar">
-                                    <img src="http://lorempixel.com/80/80/abstract/1" class="circle">
-                                    <span class="title">Title</span>
-                                    <p>Artist</p>
-                                    <a href="#!" class="secondary-content"><i class="material-icons">keyboard_voice</i></a>
-                                </li>
-                                <li class="collection-item avatar">
-                                    <img src="http://lorempixel.com/80/80/abstract/2" class="circle">
-                                    <span class="title">Title</span>
-                                    <p>Artist</p>
-                                    <a href="#!" class="secondary-content"><i class="material-icons">keyboard_voice</i></a>
-                                </li> 
-                            </ul>
+                <div class="carousel-item">
+                    <div class="card sticky-action">
+                        <div class="card-image ">
+                            <img src="http://lorempixel.com/200/200/technics/2">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                <i class="material-icons md1">headset</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p id="card-title">Title</p>
+                            <p id="card-artist">Artist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card sticky-action">
+                        <div class="card-image ">
+                            <img src="http://lorempixel.com/200/200/technics/3">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                <i class="material-icons md1">headset</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p id="card-title">Title</p>
+                            <p id="card-artist">Artist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card sticky-action">
+                        <div class="card-image ">
+                            <img src="http://lorempixel.com/200/200/technics/4">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                <i class="material-icons md1">headset</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p id="card-title">Title</p>
+                            <p id="card-artist">Artist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card sticky-action">
+                        <div class="card-image ">
+                            <img src="http://lorempixel.com/200/200/technics/5">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                <i class="material-icons md1">headset</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p id="card-title">Title</p>
+                            <p id="card-artist">Artist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card sticky-action">
+                        <div class="card-image ">
+                            <img src="http://lorempixel.com/200/200/technics/6">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red">
+                                <i class="material-icons md1">headset</i></a>
+                        </div>
+                        <div class="card-content">
+                            <p id="card-title">Title</p>
+                            <p id="card-artist">Artist</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!--JavaScript at end of body for optimized loading-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <!-- Our JavaScript -->
-        <script type="text/javascript" src="javascript/app_index.js"></script>
+    <!--JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="javascript/app_index.js"></script>
 </body>
 
 

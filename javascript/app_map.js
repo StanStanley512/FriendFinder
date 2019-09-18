@@ -3,7 +3,9 @@ $(document).ready(function () {
     $('.sidenav').sidenav();
 
     function getPositionForAddress(address) {
-        let queryURL = `https://api.tomtom.com/search/2/geocode/${address}.json?limit=1&key=90e9rkuEupM3gLfROkv1nrNqGj6iBeCH`
+        let apiKey = "90e9rkuEupM3gLfROkv1nrNqGj6iBeCH";
+        let maxNumRecordsReturned = 1;
+        let queryURL = `https://api.tomtom.com/search/2/geocode/${address}.json?limit=${maxNumRecordsReturned}&key=${apiKey}`;
 
         $.ajax({
             url: queryURL,
@@ -17,10 +19,11 @@ $(document).ready(function () {
 
             getNearByPlaces(latitude, longitude);
         });
-      };
+    };
 
-      function getNearByPlaces(latitude, longitude) {
-        var queryURL = `https://api.tomtom.com/search/2/search/karaoke.json?key=90e9rkuEupM3gLfROkv1nrNqGj6iBeCH&lat=${latitude}&lon=${longitude}`
+    function getNearByPlaces(latitude, longitude) {
+        let apiKey = "90e9rkuEupM3gLfROkv1nrNqGj6iBeCH";
+        var queryURL = `https://api.tomtom.com/search/2/search/karaoke.json?key=${apiKey}&lat=${latitude}&lon=${longitude}`;
 
         $.ajax({
             url: queryURL,
@@ -30,28 +33,59 @@ $(document).ready(function () {
             console.log(response);
 
             for(let i = 0; i < response.results.length; i++) {
+                //Get result
+                let result = response.results[i];
+
                 // Create and save a reference to new empty table row
                 const tRow = $('<tr>');
 
-                // Create and save references to td elements from the AJAX response object
-                const name = $('<td>').text(response.results[i].poi.name);
-                const addr = $('<td>').text(response.results[i].address.freeformAddress);
-                const phone = $('<td>').text(response.results[i].poi.phone);
-                const url = $('<td>').text(response.results[i].poi.url);
-                const location = $('<td>').text(`Latitude: ${response.results[i].position.lat} Longitude: ${response.results[i].position.lon}`);
+                // Generate query string for Maps search
+                const queryString = generateQueryString(result.poi.name, result.address.freeformAddress);
+                
+                //Create map link
+                const link = $('<a>').attr("href", queryString);
+                link.text(result.poi.name);
+                const name = $('<td>');
+                name.append(link);
 
+                // Create td elements from the AJAX response object
+                const address = $('<td>').text(result.address.freeformAddress);
+                const phone = $('<td>').text(result.poi.phone);
+
+                //Create website link
+                const website = $('<a>').attr("href", result.poi.url);
+                website.text(result.poi.url);
+                const url = $('<td>');
+                url.append(website);
+                
                 // Append the td elements to the new table row
                 tRow.append(name);
-                tRow.append(addr);
+                tRow.append(address);
                 tRow.append(phone);
                 tRow.append(url);
-                tRow.append(location);
 
                 // Append the table row to the tbody element
                 $('tbody').append(tRow);
             }
         });
-      };
+    };
 
-      //getPositionForAddress("2405 Robert Dedman Drive Austin TX 78712");
+    function generateQueryString(name, address) {
+        let baseUrl = "https://www.google.com/maps/search/?api=1&query=";
+
+        let formattedName = name.replace(/ /g, "+");
+        let formattedAddress = address.replace(/,/g, "");
+        formattedAddress = formattedAddress.replace(/ /g, "+");
+
+        const queryString = `${baseUrl}${formattedName}+${formattedAddress}`;
+
+        return queryString;
+    }
+
+    //getPositionForAddress("2405 Robert Dedman Drive Austin TX 78712");
   });
+
+
+//SEARCH FUNCTIONS
+// on click
+//get locations of #karaoke withn X radius
