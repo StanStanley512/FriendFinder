@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        ul.collection{
+            max-height: 400px;
+            overflow: scroll;
+        }
+        .brand-logo{
+            margin-left: 25px;
+        }
+        .hide-on-med-and-down{
+            margin-right:25px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- desktop navbar -->
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">CapCityKaraoke</a>
+                <a href="index.html" data-target="sidenav-menu" class="sidenav-trigger"><i
+                        class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="song.html">Find Songs</a></li>
+                    <li><a href="map.html">Find Places</a></li>
+                    <li><a href="queue.html">Up Next</a></li>
+                    <li><a href="history.html">History</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- mobile navbar -->
+    <ul class="sidenav" id="sidenav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="songpage.html">Find Songs</a></li>
+        <li><a href="placepage.html">Find Places</a></li>
+        <li><a href="queue.html">Up Next</a></li>
+        <li><a href="history.html">History</a></li>
+    </ul>
+    <!-- search bar -->
+    <div class="container">
+        <h4>Add a Song to the Queue by Searching</h4>
+        <div class="row section">
+            <div class="col s12">
+                <nav>
+                    <div class="nav-wrapper">
+                        <form>
+                            <div class="input-field">
+                                <input  id="song-search" type="text" class="validate">
+                                <label for="song-search"><i class="material-icons">audiotrack</i></label>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div> 
+        </div>
+        <div class="row section">
+            <div class="col s12">
+                <nav>
+                    <div class="nav-wrapper">
+                        <form>
+                            <div class="input-field">
+                                <input id="artist-search" type="search">
+                                <label class="label-icon" for="search"><i class="material-icons">person_outline</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div> 
+        </div>
+        <h4>Add a Song  to Queue by Spotify Genre</h4>
+        <div class="row">
+            <div class="col s2 center-align" id="country-button"><a class="btn-small">Country</a></div>
+            <div class="col s2 center-align" id="current-hits-button"><a class="btn-small">Current Hits</a></div>
+            <div class="col s2 center-align" id="oldies-button"><a class="btn-small">Oldies</a></div>
+            <div class="col s2 center-align" id="pop-button"><a class="btn-small">Pop</a></div>
+            <div class="col s2 center-align" id="rock-button"><a class="btn-small">Rock</a></div>
+            <div class="col s2 center-align" id="rap-button"><a class="btn-small">Rap</a></div>
+        </div>
+        <!-- song collection -->
+        <div class="row section">
+            <div class="col s12 section">
+                <ul id="song-collection" class="collection"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- add-song-modal -->
+  <div id="add-to-queue-modal" class="modal">
+        <div class="modal-content">
+          <h6>Add Song to Up Next queue</h6>
+          <p class="text-flow">Song added to Up Next</p>
+        </div>
+        <div class="modal-footer">
+          <a onclick="M.toast({html: 'Song Added to Up Next queue'})" href="#!" id="okay-add-song" class="modal-close waves-effect waves-green btn-flat">Okay</a>
+          <a onclick="M.toast({html: 'Song Removed'})" href="#!" id="remove-add-song" class="modal-close waves-effect waves-green btn-flat">Remove</a>
+          <a href="#!" id="cancel-add-song" class="modal-close waves-effect waves-green btn-flat">Canceled</a>
+
+
+        </div>
+      </div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <!-- Our JavaScript -->
+    <script type="text/javascript" src="javascript/app_song.js"></script>
+    <script type="text/javascript" src="javascript/constructor_Avatar.js"></script>
+</body>
+
+</html>
