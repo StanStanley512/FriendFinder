@@ -7,19 +7,17 @@
 
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script
-    src="https://code.jquery.com/jquery-2.2.4.min.js"
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-    crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- Font Awesome Glyphicons -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="friendfinder.css">
 
     <!-- Chosen -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script> -->
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   </head>
 
@@ -188,7 +186,7 @@
       <footer class="footer">
         <div class="container">
           <p>
-            <a href="/api/friends">API Friends List</a> |
+            <a href="/api/friends.js">API Friends List</a> |
             <a href="https://github.com/StanStanley512/FriendFinder">GitHub Repo</a>
           </p>
         </div>
@@ -197,7 +195,7 @@
     </div>
 
     <!-- Modal -->
-    <div id="results-modal" class="modal fade" role="dialog">
+    <div id="resultsModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -220,8 +218,9 @@
       </div>
     </div>
   </body>
-  <script src="server.js"></script>
-  <script src="routing/apiRouting.js"></script>
+  <!-- <script src="./server"></script>
+  <script src="./routing/apiRouting"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script type = "text/javascript">
     $("#submit").on("click", function() {
         function validateForm() {
@@ -255,7 +254,7 @@
             $.post(currentURL + "/api/friends", userData, function(data) {
                 $("#matchName").text(data.name);
                 $("#matchImg").attr("src", data.photo);
-                $("#resultModal").modal("toggle");
+                $("#resultsModal").modal("toggle");
             });
         } else {
             alert("Fill out all fields to get result")
